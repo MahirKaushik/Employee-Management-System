@@ -1,0 +1,44 @@
+
+img{
+    width:100vw;
+    height: 100vh;
+    position:absolute;
+    z-index: -1;
+}
+    
+
+
+
+.Login{
+    display: flex;
+    /* flex-flow: column; */
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+.Login form{
+    /* text-align: center; */
+    border-radius: 30px;
+    background-color: rgba(58, 58, 58, 0.707);
+    margin-top: 30vh;
+    padding: 30px;
+    width: 37vw;
+    color: aliceblue;
+}
+
+.Login form input{
+    color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+.Login form *{
+    padding: 5px;
+}
+
+
+
+
+
