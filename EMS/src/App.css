@@ -63,7 +63,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 81.1vw;
+    width: 81.7vw;
     border-bottom: 1px solid grey;
     height: 60px;
     box-shadow: 0px 10px 10px rgb(125, 125, 125);
@@ -135,20 +135,46 @@ a{
 
 
 
-.table1 *{
-    width: 75vw;
+.table1 td,tr,th{
+    width: 78vw;
     padding: 10px;
     border-bottom:1px solid gray;
-    
-    
 }
 
 .table1{
     margin-top:20px ;
-    
-    border-collapse:collapse;
-    
 }
+
+
+
+
+
+
+
+
+/* addemployee */
+
+.emp-b{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+.emp{
+    display: flex;
+    flex-flow: column;
+    width: 480px;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.emp h3{
+    align-self: center;
+}
+
+
+
 
 
 

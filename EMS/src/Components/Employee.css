@@ -1,0 +1,19 @@
+
+.emp-table1{
+    text-align: center;
+    width: 100%;
+}
+
+.emp-table1 tr,td,th {
+    width: 70px;
+    height: 80px;
+    border: 1px solid rgba(89, 89, 89, 0.551);
+
+}
+
+.emp-table1 img{
+    /* margin: 20px; */
+    border-radius: 50%  ;
+    width: 70px;
+    height: 70px;
+}

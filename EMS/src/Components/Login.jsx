@@ -35,7 +35,7 @@ function Login() {
 
   return (
     <>
-      <img src="https://wallpapers.com/images/featured/abstract-1ub6r4ns7eopdsol.jpg" alt="Login" />
+      <img src="https://wallpapers.com/images/featured/abstract-1ub6r4ns7eopdsol.jpg" className='log-img' alt="Login" />
 
       <div className='Login'>
         <form onSubmit={handleSub}>

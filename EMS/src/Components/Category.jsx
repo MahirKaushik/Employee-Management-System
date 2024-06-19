@@ -14,7 +14,6 @@ const Category = () => {
     axios.get('http://localhost:3000/auth/category')
       .then(result => {
         if (result.data.Status) {
-          console.log(result.data.Result)
           setCategory(result.data.Result)
 
         } else {
@@ -33,8 +32,8 @@ const Category = () => {
 
         {/* we will create a table for category list */}
 
-        <div className='table1'>
-          <table>
+        <div>
+          <table  className='table1'>
             <thead>
               <tr>
                 <th>Name</th>
