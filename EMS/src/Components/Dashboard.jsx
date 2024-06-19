@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "../Components/Dashboard.css"
 import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
     <>
     <div className='whole'>
+      
       <div className='aside'>
         <div>EMS</div>
         <ul>
@@ -28,10 +28,12 @@ const Dashboard = () => {
           </Link>  
         </ul>
       </div>
+
       <div>
-        <div className='navi'>Employee Managaement System</div>
+        <div className='navi'>Employee Management System</div>
         <Outlet />
       </div>
+
     </div>
     </>
   )

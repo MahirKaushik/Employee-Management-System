@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import '../Components/Category.css'
 import { useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
@@ -19,7 +18,7 @@ const Addcategory = () => {
           if(result.data.Status){
             navigate('/dashboard/category')
           }else{
-            alert('invalid')
+            alert(result.data.Error)
           }
         })
         .catch(err => console.log(err))
