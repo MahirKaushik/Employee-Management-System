@@ -17,9 +17,10 @@
     
 }
 .Login form{
-    border-radius: 30px;
-    background-color: rgba(58, 58, 58, 0.707);
-    margin-top: 30vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(1, 25, 75, 0.422);
+    margin-top: 25vh;
     padding: 30px;
     width: 37vw;
     color: aliceblue;

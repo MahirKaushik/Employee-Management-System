@@ -9,6 +9,12 @@ import Profile from './Components/Profile'
 import Addcategory from './Components/Addcategory'
 import Addemployee from './Components/Addemployee'
 import EditEmployee from './Components/EditEmployee'
+import Start from './Components/Start'
+import EmployeeLogin from './Components/EmployeeLogin'
+import EmployeeDetail from './Components/EmployeeDetail'
+
+
+
 
 function App() {
   
@@ -16,7 +22,10 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
+      <Route path='/start' element={<Start/>}></Route>
+
       <Route path='/adminlogin' element={ <Login/>}/>
+      <Route path='/employee_login' element={ <EmployeeLogin/>}/>
 
 
       <Route path='/dashboard' element={<Dashboard/>}>
@@ -28,9 +37,10 @@ function App() {
       <Route path='/dashboard/add_category' element={<Addcategory/>} ></Route>
       <Route path='/dashboard/add_employee' element={<Addemployee/>} ></Route>
       <Route path='/dashboard/edit_employee/:id' element={<EditEmployee/>} ></Route>
-       
-
+  
       </Route>
+
+      <Route path='/employee_detail/:id' element={<EmployeeDetail/>} ></Route>
 
 
 

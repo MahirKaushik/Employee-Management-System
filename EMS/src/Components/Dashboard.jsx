@@ -14,7 +14,7 @@ const Dashboard = () => {
     axios.get('http://localhost:3000/auth/logout')
     .then(result =>{
       if(result.data.Status){
-        navigate('/adminlogin')
+        navigate('/start')
       }
     })
   }
@@ -44,7 +44,7 @@ const Dashboard = () => {
       </div>
 
       <div>
-        <div className='navi'>Employee Management System</div>
+        <div className='navi'> Employee Management System</div>
         <Outlet />
       </div>
 

@@ -1,45 +1,43 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
-import './Login.css'
 import axios from 'axios'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function Login() {
 
-  const[values,setValues]=useState({
-    email:'',
-    password:''
-  })
+const EmployeeLogin = () => {
 
-  const [error,setError]=useState(null)
-
-  const navigate=useNavigate()
-
-  axios.defaults.withCredentials=true
-
-  const handleSub=(e)=>{
-    e.preventDefault();
-    axios.post('http://localhost:3000/auth/adminlogin',values)
-    .then(result=> {
-      if(result.data.loginStatus){
-        navigate('/dashboard')
-      }else{
-        setError(result.data.Error)
+    const[values,setValues]=useState({
+        email:'',
+        password:''
+      })
+    
+      const [error,setError]=useState(null)
+    
+      const navigate=useNavigate()
+    
+      axios.defaults.withCredentials=true
+    
+      const handleSub=(e)=>{
+        e.preventDefault();
+        axios.post('http://localhost:3000/employee/employee_login',values)
+        .then(result=> {
+          if(result.data.loginStatus){
+            navigate('/employee_detail/'+ result.data.id)
+          }else{
+            setError(result.data.Error)
+          }
+          
+        })
+        .catch(err=> console.log(err))
+    
       }
-      
-    })
-    .catch(err=> console.log(err))
-
-  }
-
-
   return (
     <>
       <img src="https://www.einnosys.com/wp-content/uploads/2023/09/Best-Software-Solutions-for-Education-Industry.png" className='log-img' alt="Login" />
 
       <div className='Login'>
         <form onSubmit={handleSub}>
-          <h2>Admin Login</h2>
+          <h2>Employee Login</h2>
           
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
@@ -64,5 +62,4 @@ function Login() {
   )
 }
 
-export default Login
-
+export default EmployeeLogin
