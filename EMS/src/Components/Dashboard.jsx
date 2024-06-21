@@ -14,7 +14,8 @@ const Dashboard = () => {
     axios.get('http://localhost:3000/auth/logout')
     .then(result =>{
       if(result.data.Status){
-        navigate('/start')
+        localStorage.removeItem("valid" )
+        navigate('/')
       }
     })
   }
@@ -34,9 +35,9 @@ const Dashboard = () => {
           <Link to="/dashboard/category">
           <li><span className="material-icons">category</span>Category</li>
           </Link>
-          <Link to="/dashboard/profile">
+          {/* <Link to="/dashboard/profile">
           <li><span className="material-icons">account_circle</span>Profile</li>
-          </Link>
+          </Link> */}
           <Link onClick={handleLogout}>
           <li><span className="material-icons">logout</span>Logout</li>
           </Link>  

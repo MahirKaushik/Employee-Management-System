@@ -86,7 +86,7 @@ const Home = () => {
           <thead>
             <tr>
               <th>Email</th>
-              <th>Action</th>
+              {/* <th>Action</th> */}
             </tr>
           </thead>
           <tbody>
@@ -94,7 +94,7 @@ const Home = () => {
               admins.map(a =>(
                 <tr>
                   <td>{a.email}</td>
-                  <td>
+                  {/* <td>
                   <button
                     className=" btn btn-info m-1"
                   >
@@ -105,7 +105,7 @@ const Home = () => {
                   >
                     Delete
                   </button>
-                </td>
+                </td> */}
                 </tr>
               ))
             }

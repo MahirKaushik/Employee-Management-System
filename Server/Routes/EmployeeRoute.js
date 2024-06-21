@@ -18,8 +18,8 @@ router.post("/employee_login", (req, res) => {
                 if (response) {
                     const email = result[0].email;
                     const token = jwt.sign(
-                        { role: "employee", email: email },
-                        "employee_secret_key",
+                        { role: "employee", email: email, id:result[0].id },
+                        "jwt_secret_key",
                         { expiresIn: "1d" }
 
                     );

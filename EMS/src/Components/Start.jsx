@@ -1,9 +1,26 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const Start = () => {
-  const navigate = useNavigate();
+  const navigate =useNavigate()
+  axios.defaults.withCredentials =true;
+
+  useEffect(()=>{
+    axios.get('http://localhost:3000/verify')
+    .then(result =>{
+      if(result.data.Status){
+        if(result.data.role === "admin"){
+          navigate('/dashboard')
+        }else{
+          navigate('/employee_detail/'+ result.data.id)
+        }
+      }
+
+    }).catch(err => console.log(err))
+  },[])
   return (
     <>
       <img

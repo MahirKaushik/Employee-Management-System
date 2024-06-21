@@ -8,6 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 const EmployeeDetail = () => {
     const navigate =useNavigate();
+    // axios.defaults.withCredentials =true;
     
     const [employee,setEmployee]=useState([])
     const {id} = useParams()
@@ -23,7 +24,8 @@ const EmployeeDetail = () => {
         axios.get('http://localhost:3000/employee/logout')
         .then(result =>{
           if(result.data.Status){
-            navigate('/start')
+            localStorage.removeItem("valid")
+            navigate('/')
           }
         })
       }
