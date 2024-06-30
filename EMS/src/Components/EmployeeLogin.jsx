@@ -55,7 +55,7 @@ const EmployeeLogin = () => {
           <br />
           <button type="submit" className="btn btn-primary btn-sm btn-success w-100 rounded-100">Log In</button>
             
-              <input type="checkbox" name='tick'  className="form-check-input my-3 me-1" id="tick"/>
+              <input type="checkbox" name='tick'  className="form-check-input my-3 me-1" id="tick" required/>
               <label className=' my-2'  htmlFor="tick">Agree to T&C</label>
            
         </form>
